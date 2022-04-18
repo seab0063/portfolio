@@ -1,0 +1,388 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/******************************************************
+                    Defaults  
+******************************************************/
+
+@font-face{
+    font-family: 'Britannic';
+    src: url(fonts/Britannic_Bold_Regular.ttf);
+}
+
+@font-face{
+    font-family: 'Rockwell';
+    src: url(fonts/Rockwell-Bold.ttf);
+}
+
+html{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:17px;
+    color:black;
+}
+
+a{
+    text-decoration:none;
+}
+
+h1{
+    font-family:"Britannic", sans-serif;
+    font-size:5rem;
+    text-align:center;
+    color:red;
+}
+
+h2{
+    font-family:"Rockwell", sans-serif;
+    font-size:3rem;
+    font-weight:bold;
+    text-align:center;
+}
+
+.button{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:1.2rem;
+    color:white;
+    background-color:red;
+    padding:10px 40px;
+    display:inline-block;
+    border-radius:15px;
+    display:flex;
+    justify-content:center;
+    margin-left:150px;
+    margin-right:150px;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+
+/******************************************************
+                    Nav   
+******************************************************/
+
+nav{
+    padding:20px;
+    position:relative;
+}
+
+.navback{
+    background-color:white;
+}
+
+.logo{
+    background-color:white;
+    text-align:center;
+}
+
+nav ul a{
+    display:block;
+    padding:0.5rem;
+    text-align:center; 
+}
+
+nav form{
+    text-align:center;
+}
+
+nav form input{
+    flex-grow:1;
+    padding:4px 2px;
+}
+
+nav form button{
+    display:none;
+}
+
+/******************************************************
+                    Header   
+******************************************************/
+
+header{
+    position:relative;
+}
+
+.imageback{
+    height:650px;
+    width:100%;
+}
+
+.jorge{
+    position:absolute;
+    top:200px;
+    background:#f5f5f575;
+    padding:10px 0;
+    height:120px;
+    width:100%;
+}
+
+header:after{
+    content: '';
+    background-image:url("../images/banner.jpg");
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+
+    position:absolute;
+    top:0;
+    height:100%;
+
+    width:100%;
+
+    z-index: -1;
+}
+
+/******************************************************
+                    Home   
+******************************************************/
+
+#updates{
+    text-align:center;
+    padding:10px;
+}
+
+.rick{
+    background-color:aqua;
+    border:1px solid grey;
+}
+
+.rick p{
+    padding-left:20px;
+    padding-top:10px;
+}
+
+#rickbutton{
+    margin:20px;
+    display:flex;
+    justify-content:center;
+}
+
+.mike{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr 1fr;
+}
+
+.alan{
+    padding-top:10px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/******************************************************
+                    About 
+******************************************************/
+
+.mii{
+    padding-top:10px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#about{
+    padding:10px;
+}
+
+.seinfeld p{
+    padding:10px;
+}
+
+/******************************************************
+                    Footer  
+******************************************************/
+footer{
+    border-top:1px solid grey;
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    grid-template-rows:repeat(5, 1fr);
+    grid-template-areas:
+    "logo logo list sm sm"
+    "logo logo list sm sm"
+    "logo logo list sm sm"
+    "contact contact contact contact contact"
+    "contact contact contact contact contact";
+  }
+
+  .janet{
+      grid-area:logo;
+  }
+
+  .jimmy{
+      grid-area:list;
+  }
+
+  .joey{
+      grid-area:contact;
+  }
+
+  .joey li, .jimmy li{
+      padding:10px;
+  }
+
+  .jeffy{
+      grid-area:sm;
+      text-align:center;
+  }
+
+  footer h3{
+      font-size:1.2em;
+      padding-bottom:10px;
+  }
+
+  @media screen and (min-width:760px){
+    /* ~~~~~~~~~~~~~~~~ Defaults ~~~~~~~~~~~~~~~~*/
+
+    h1{
+        font-size:6rem;
+    }
+
+    /* ~~~~~~~~~~~~~~~~ Nav ~~~~~~~~~~~~~~~~*/
+      nav{
+        display:flex;
+        align-items:center;
+        justify-content:space-around;
+    }
+
+      nav ul{
+        flex-grow:1;
+        max-width:500px;
+        display:flex;
+        justify-content:space-around;
+    }
+
+      nav input{
+        width:175px;
+    }
+
+    /* ~~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~~*/
+      .mike{
+          display:flex;
+    }
+
+    /* ~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~*/
+
+    footer{
+        grid-template-columns:repeat(8, 1fr);
+        grid-template-rows:1fr;
+        grid-template-areas:
+        "logo list contact contact contact contact sm sm";
+    }
+
+    .janet{
+        grid-area:logo;
+    }
+  
+    .jimmy{
+        grid-area:list;
+    }
+  
+    .joey{
+        grid-area:contact;
+    }
+  
+    .jeffy{
+        grid-area:sm;
+    }
+  }
+
+  @media screen and (min-width:1200px){
+
+    /* ~~~~~~~~~~~~~~~~ Defaults ~~~~~~~~~~~~~~~~*/
+    html{
+        font-size:20px;
+    }
+
+    /* ~~~~~~~~~~~~~~~~ Nav ~~~~~~~~~~~~~~~~*/
+      nav ul{
+        flex-grow:1;
+        max-width:600px;
+        display:flex;
+        justify-content:space-around;
+    }
+
+      nav input{
+        width:200px;
+    }
+
+      nav a:hover{
+        background-color:red;
+        color:white;
+    }
+
+      /* ~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~*/
+
+    .imageback{
+        height:550px;
+    }
+
+      /* ~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~*/
+
+    footer{
+        grid-template-columns:repeat(6, 1fr);
+        grid-template-rows:1fr;
+        grid-template-areas:
+        "logo list contact contact sm sm";
+    }
+
+    .janet{
+        grid-area:logo;
+    }
+  
+    .jimmy{
+        grid-area:list;
+    }
+  
+    .joey{
+        grid-area:contact;
+    }
+  
+    .jeffy{
+        grid-area:sm;
+    }
+  }
