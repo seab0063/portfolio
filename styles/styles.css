@@ -172,7 +172,7 @@ header{
 
 header:after{
     content: '';
-    background-image:url("../images/banner.jpg");
+    background-image:url("../images/banner.JPG");
     background-position:center;
     background-size:cover;
     background-repeat:no-repeat;
