@@ -31,9 +31,6 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
-}
 blockquote, q {
 	quotes: none;
 }
@@ -46,6 +43,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/*NOTE: I took out the list style part of the CSS Reset so the bullets can appear on my list from the about page. I'll
+take them out anywhere I need to manually.*/
 
 /******************************************************
                     Defaults  
@@ -73,7 +73,7 @@ a{
 
 h1{
     font-family:"Britannic", sans-serif;
-    font-size:5rem;
+    font-size:5.5rem;
     text-align:center;
     color:red;
 }
@@ -83,6 +83,11 @@ h2{
     font-size:3rem;
     font-weight:bold;
     text-align:center;
+}
+
+p{
+    font-size:0.9rem;
+    line-height:1.2rem;
 }
 
 .button{
@@ -122,7 +127,12 @@ nav{
 nav ul a{
     display:block;
     padding:0.5rem;
-    text-align:center; 
+    text-align:center;  
+    color:black;
+}
+
+nav li{
+    list-style:none;
 }
 
 nav form{
@@ -197,8 +207,6 @@ header:after{
 
 #rickbutton{
     margin:20px;
-    display:flex;
-    justify-content:center;
 }
 
 .mike{
@@ -209,6 +217,7 @@ header:after{
 
 .alan{
     padding-top:10px;
+    width:90%;
     display:block;
     margin-left:auto;
     margin-right:auto;
@@ -220,6 +229,7 @@ header:after{
 
 .mii{
     padding-top:10px;
+    width:70%;
     display:block;
     margin-left:auto;
     margin-right:auto;
@@ -233,11 +243,124 @@ header:after{
     padding:10px;
 }
 
+.kenny{
+    background-color:aqua;
+    border:1px solid grey;
+}
+
+.kenny h2{
+    padding:10px;
+}
+
+.kenny ul{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    padding-bottom:15px;
+    font-size:0.9rem;
+}
+
+.stewie{
+    padding-left:30%;
+    margin-bottom:50px;
+}
+
+.brian{
+    padding-left:20%;
+}
+
+/******************************************************
+                    Blog  
+******************************************************/
+.jay{
+    border:1px solid grey;
+}
+
+.jay h2{
+    font-size:2.5rem;
+    padding:15px 0 10px 0;
+}
+
+.jay p{
+    padding:10px;
+}
+
+/******************************************************
+                    Portfolio  
+******************************************************/
+.artwork{
+    padding:10px 0 10px 0;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#sheldon, #leonard{
+    width:90%;
+}
+
+#rajesh{
+    width:75%;
+}
+
+#howard{
+    width:50%;
+}
+
+/******************************************************
+                    Contact
+******************************************************/
+#contact{
+    padding:10px;
+}
+
+#contact label{
+    display:block;
+    margin:20px 0 20px 0;
+    font-size:1.2rem;
+}
+
+#contact input, #contact textarea{
+    box-sizing:border-box;
+    display:block;
+    width:100%;
+}
+
+#contact input{
+    height:2rem;
+}
+
+#contact textarea{
+    height:13.5rem;
+    margin-bottom:1rem;
+}
+
+#submit{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    border:none;
+}
+
+.sm{
+    text-align:center;
+}
+
+.sm h3{
+    font-size:1.2rem;
+    padding:10px;
+}
+
+.sm p{
+    font-size:1rem;
+    padding:15px;
+}
+
 /******************************************************
                     Footer  
 ******************************************************/
 footer{
     border-top:1px solid grey;
+    margin-top:10px;
     display:grid;
     grid-template-columns:repeat(5, 1fr);
     grid-template-rows:repeat(5, 1fr);
@@ -247,6 +370,14 @@ footer{
     "logo logo list sm sm"
     "contact contact contact contact contact"
     "contact contact contact contact contact";
+  }
+
+  footer li{
+    list-style:none;
+  }
+
+  footer li a{
+    color:black;
   }
 
   .janet{
@@ -261,18 +392,23 @@ footer{
       grid-area:contact;
   }
 
-  .joey li, .jimmy li{
+  .joey h3, .joey li, .jimmy li{
       padding:10px;
   }
 
   .jeffy{
       grid-area:sm;
       text-align:center;
+      margin-top:10px;
   }
 
   footer h3{
       font-size:1.2em;
       padding-bottom:10px;
+  }
+
+  #footer{
+      margin-top:0;
   }
 
   @media screen and (min-width:760px){
@@ -282,6 +418,13 @@ footer{
         font-size:6rem;
     }
 
+    h2{
+        font-size:3.1rem;
+    }
+
+    .button{
+        padding:10px 20px;
+    }
     /* ~~~~~~~~~~~~~~~~ Nav ~~~~~~~~~~~~~~~~*/
       nav{
         display:flex;
@@ -301,8 +444,164 @@ footer{
     }
 
     /* ~~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~~*/
-      .mike{
-          display:flex;
+    .mike{
+        display:flex;
+    }
+
+    .rick{
+        width:25%;
+    }
+
+    /* ~~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~~*/
+    .mii{
+        width:90%;
+        padding-top:20px;
+        padding-bottom:20px;
+        margin-left:20px;
+    }
+
+    .seinfeld{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+    .seinfeld h2{
+        text-align:left;
+    }
+
+    .jerry{
+        grid-column:1;
+    }
+
+    .george{
+        grid-column:2 / 4;
+    }
+
+    #kramer{
+        padding:10px 20px;
+        margin-left:65%;
+        margin-right:5%;
+    }
+
+    .qualities{
+        display:flex;
+    }
+
+    .kenny{
+        width:33.3%
+    }
+
+    .kenny h2{
+        text-align:left;
+        padding-left:10%;
+    }
+
+    .kenny ul{
+        display:flex;
+        flex-direction:column;
+        padding-left:10%;
+    }
+
+    .stewie{
+        padding-left:10px;
+        margin-bottom:0;
+    }
+    
+    .brian{
+        padding-left:10px;
+        margin-bottom:20px;
+    }
+
+    /* ~~~~~~~~~~~~~~~~ Blog ~~~~~~~~~~~~~~~~*/
+    .jay{
+        display:grid;
+        grid-template-columns:1fr 1fr 1fr;
+    }
+
+    .jay h2{
+        text-align:left;
+        padding-left:10px;
+    }
+
+    .charles{
+        grid-column:1;
+    }
+
+    .kevin{
+        grid-column:2 / 4;
+    }
+
+    /* ~~~~~~~~~~~~~~~~ Portfolio ~~~~~~~~~~~~~~~~*/
+    .phil{
+        display:grid;
+        grid-template-columns:repeat(10, 1fr);
+        grid-template-rows:repeat(9, 1fr);
+        grid-template-areas:
+        "sci sci sci sci sci tree tree tree tree tree"
+        "sci sci sci sci sci tree tree tree tree tree"
+        "sci sci sci sci sci tree tree tree tree tree"
+        "sci sci sci sci sci tree tree tree tree tree"
+        "sci sci sci sci sci tree tree tree tree tree"
+        "sci sci sci sci sci dog dog dog leaf leaf"
+        "sci sci sci sci sci dog dog dog leaf leaf"
+        "sci sci sci sci sci dog dog dog leaf leaf"
+        "sci sci sci sci sci dog dog dog leaf leaf";
+    }
+
+    #sheldon{
+        grid-area:sci;
+    }
+
+    #leonard{
+        grid-area:tree;
+        margin-top:15px;
+        width:95%;
+    }
+
+    #rajesh{
+        grid-area:dog;
+        width:90%;
+    }
+
+    #howard{
+        grid-area:leaf;
+        width:90%;
+    }
+
+    .artwork{
+        margin-top:auto;
+        margin-bottom:auto;
+    }
+
+    /* ~~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~~*/
+
+    #contact label{
+        margin-left:5%;
+    }
+    
+    #contact input, #contact textarea{
+        width:90%;
+        margin-left:5%;
+    }
+    
+    #contact textarea{
+        height:8.5rem;
+        margin-bottom:0;
+    }
+    
+    #submit{
+        padding:10px 20px;
+        margin-left:85%;
+        margin-right:5%;
+    }
+    
+    .sm{
+        text-align:left;
+        margin-left:5%;
+    }
+    
+    .sm p{
+        padding:10px;
     }
 
     /* ~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~*/
@@ -338,6 +637,32 @@ footer{
         font-size:20px;
     }
 
+    h1{
+        font-size:6.2rem;
+    }
+
+    h2{
+        font-size:3.2rem;
+    }
+
+    a:hover{
+        background-color:red;
+        color:white;
+        transition-property: all;
+	    transition-duration: 0.5s; 
+    }
+
+    a{
+        transition-property: all;
+	    transition-duration: 0.5s;
+    }
+
+    .button:hover{
+	    border:1px solid red;
+	    background-color:white;
+        color:red;
+    }
+
     /* ~~~~~~~~~~~~~~~~ Nav ~~~~~~~~~~~~~~~~*/
       nav ul{
         flex-grow:1;
@@ -350,39 +675,39 @@ footer{
         width:200px;
     }
 
-      nav a:hover{
-        background-color:red;
-        color:white;
-    }
-
       /* ~~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~~*/
 
-    .imageback{
+      .imageback{
         height:550px;
+    }
+
+      .jorge{
+        padding-bottom:20px;
+        padding-top:0;
     }
 
       /* ~~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~~*/
 
-    footer{
+      footer{
         grid-template-columns:repeat(6, 1fr);
         grid-template-rows:1fr;
         grid-template-areas:
         "logo list contact contact sm sm";
     }
 
-    .janet{
+      .janet{
         grid-area:logo;
     }
   
-    .jimmy{
+      .jimmy{
         grid-area:list;
     }
   
-    .joey{
+      .joey{
         grid-area:contact;
     }
   
-    .jeffy{
+      .jeffy{
         grid-area:sm;
     }
   }

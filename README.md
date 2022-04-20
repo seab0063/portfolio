@@ -1,1 +1,5 @@
-# portfolio
+# Portfolio
+
+**I used HTML and CSS to codee my self promotion website that I designed on XD in UX design. I did the mobile (under 760), tablet (760 and above) and desktop (above 1200) versions, and made it so the website responds well to each version. I used percentage to determine the width of each image to make all of them responsive to the layout. I made sure the text was all readable and the images were of good quality. There were a couple of fonts that I used in the mockup which were availible in Adobe XD but they weren't here and I couldn't use google fonts to import them, so I used a different technique. I downloaded those fonts and made a folder for them, and then to get them to work I used the font-face tag and put in the name of the font and the url. Then to use them for headers I used the names in the font-family tag and I typed "sans serif" next to it to be certain that it works. For the most part I used flexbox and css grid properties to make sure everything is positioned where I want it. I made it so that when you hover over a link on the desktop version, it will animate to change color. I used schema for the contact information on the footer since it worked well for that context.**
+
+*Most images are my own and the ones that are not, which are the ones on the blog page, are from UnSplash*
